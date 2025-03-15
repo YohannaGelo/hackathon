@@ -1,0 +1,25 @@
+@use '../custom/custom' as cus;
+
+/* Solo se necesita para el comportamiento de la barra lateral */
+.sidebar {
+    transition: 0.3s ease-in-out;
+    width: 250px;
+    left: -250px; /* Oculto inicialmente */
+    z-index: 100;
+}
+
+.sidebar.show {
+    left: 0; /* Muestra el menú cuando tiene la clase "show" */
+}
+
+.logo-sidebar {
+    max-width: 100px; /* Tamaño del logo */
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Ajusta el tamaño del menú en pantallas pequeñas */
+    }
+}
+
