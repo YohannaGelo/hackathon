@@ -66,6 +66,13 @@
     }
 }
 
+// Mixin para pantallas en orientación horizontal (más ancho que alto)
+@mixin tablet-horizontal {
+  @media screen and (orientation: landscape) and (max-width: cus.$big)  {
+      @content;
+  }
+}
+
 
 // Personalización hr
 @mixin custom-hr($height: 4rem, $width: 100%, $size: auto, $repeat: repeat) {

@@ -4,13 +4,15 @@
 /* Solo se necesita para el comportamiento de la barra lateral */
 .sidebar {
     transition: 0.3s ease-in-out;
-    width: 20%;
-    left: -20%; /* Oculto inicialmente */
+    width: 15%;
+    left: -15%;
+    /* Oculto inicialmente */
     z-index: 100;
 }
 
 .sidebar.show {
-    left: 0; /* Muestra el menú cuando tiene la clase "show" */
+    left: 0;
+    /* Muestra el menú cuando tiene la clase "show" */
 }
 
 .logo-sidebar {
@@ -20,7 +22,7 @@
 }
 
 .logo-sidebar:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 /* Estilos base para el nav-link */
@@ -37,7 +39,7 @@
 }
 
 .nav-link:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
     background-color: cus.$warning;
     color: black;
     padding-left: cus.$spacing;
@@ -64,11 +66,17 @@
 /* Ajuste para pantallas más pequeñas */
 @include mix.mobile {
 
-    .logo-sidebar {
-        max-width: 70%;
+    .sidebar {
+        width: 20%;
+        left: -20%;
     }
 
-    
+    .logo-sidebar {
+        max-width: 70%;
+
+    }
+
+
 }
 
 
@@ -79,6 +87,21 @@
         padding-left: 3rem !important;
     }
 
-    
+
 }
 
+/* Ajuste específico para pantallas en modo horizontal en dispositivos móviles */
+@include mix.tablet-horizontal {
+    .logo-sidebar {
+        margin: 0;
+        max-width: 70%;
+
+    }
+
+    .sidebar {
+        width: 20%; /* Aumentar el ancho para que las opciones no se oculten */
+        left: -20%; /* Ocultar inicialmente */
+    }
+
+
+}
