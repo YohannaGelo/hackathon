@@ -1,10 +1,11 @@
 @use '../custom/custom' as cus;
+@use '../custom/mixins' as mix;
 
 /* Solo se necesita para el comportamiento de la barra lateral */
 .sidebar {
     transition: 0.3s ease-in-out;
-    width: 250px;
-    left: -250px; /* Oculto inicialmente */
+    width: 20%;
+    left: -20%; /* Oculto inicialmente */
     z-index: 100;
 }
 
@@ -13,13 +14,60 @@
 }
 
 .logo-sidebar {
-    max-width: 100px; /* Tamaño del logo */
+    margin: cus.$spacing 0;
+    max-width: 100%;
+    transition: transform 0.3s ease;
 }
 
+.logo-sidebar:hover {
+    transform: scale(1.1); 
+}
+
+/* Estilos base para el nav-link */
+.nav-icon {
+    color: cus.$warning;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.nav-link {
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, padding-left 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.nav-link:hover {
+    transform: scale(1.1); 
+    background-color: cus.$warning;
+    color: black;
+    padding-left: cus.$spacing;
+}
+
+.nav-link:hover .nav-icon {
+    color: black;
+
+}
+
+.section-name {
+    display: none;
+}
+
+.nav-link:hover {
+    min-width: max-content;
+}
+
+.nav-link:hover .section-name {
+    display: block;
+}
+
+
 /* Ajuste para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px; /* Ajusta el tamaño del menú en pantallas pequeñas */
+@include mix.mobile {
+
+    .logo-sidebar {
+        max-width: 70%;
     }
+
+    
 }
 

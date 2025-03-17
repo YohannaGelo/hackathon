@@ -1,43 +1,93 @@
 @use '../custom/custom' as cus;
-
-@keyframes powerOn {
-    0% { opacity: 0; filter: brightness(0); }
-    20% { opacity: 1; filter: brightness(1.5); }
-    40% { opacity: 0.5; filter: brightness(0.8); }
-    60% { opacity: 1; filter: brightness(1.2); }
-    80% { opacity: 0.7; filter: brightness(0.9); }
-    100% { opacity: 1; filter: brightness(1); }
-}
+@use '../custom/mixins' as mix;
 
 .logo {
     max-width: 1500px;
-    width: 45%;
+    margin-top: 40%;
+    width: 90%;
     opacity: 0;
-    animation: powerOn 3s ease-in-out forwards;
+
+    @include mix.powerOnAnimation('powerOn', 3s, ease-in-out);
 }
 
 @keyframes skylineEnter {
     0% {
         transform: translateY(100%);
-        opacity: 0; 
+        opacity: 0;
     }
+
     80% {
-        transform: translateY(-10%); 
-        opacity: 0.8; 
+        transform: translateY(-10%);
+        opacity: 0.8;
     }
+
     100% {
-        transform: translateY(0); 
-        opacity: 1; 
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .skyline {
     max-width: 100%;
-    animation: skylineEnter 0.8s ease-out forwards; 
+    height: 30%;
+
+    object-fit: cover;
+    animation: skylineEnter 0.8s ease-out forwards;
     animation-delay: 1.5s;
-    opacity: 0; /* Empieza invisible */
+    opacity: 0;
+    /* Empieza invisible */
     position: relative;
     bottom: 0;
-    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+    // filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(-0.4px -1px 1px cus.$warning) drop-shadow(-0.4px -1px 1px cus.$warning) drop-shadow(-0.4px -1px 1px cus.$warning) drop-shadow(-0.4px -1px 1px cus.$warning);
 
+
+}
+
+/* Ajuste para pantallas más pequeñas */
+@include mix.mobile {
+
+    /* Logo */
+    .logo {
+        margin-top: 20%;
+        width: 80%;
+    }
+
+    /* Skyline */
+    .skyline {
+        height: 35%;
+
+    }
+}
+
+@include mix.tablet {
+
+    /* Logo */
+    .logo {
+        margin-top: 20%;
+        width: 70%;
+    }
+
+    /* Skyline */
+    .skyline {
+        height: 30%;
+
+    }
+}
+
+@include mix.desktop {
+
+    /* Logo */
+    .logo {
+        margin-top: cus.$spacing;
+
+        width: 45%;
+
+    }
+
+    /* Skyline */
+    .skyline {
+        height: auto;
+        width: 100%;
+    }
 }

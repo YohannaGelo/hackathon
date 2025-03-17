@@ -1,0 +1,9 @@
+@use '../custom/custom' as cus;
+
+/* Sobreescribo las medidas del container-sm de bootstrap */
+.container-sm {
+    max-width: 70%;
+    margin: 0 cus.$spacing 0 25%;
+    padding: cus.$spacing  0;
+    z-index: 5;
+}

@@ -1,23 +1,14 @@
 @use 'custom' as cus;
+@use 'mixins' as mix;
 
-// // Modificar el color de hover para btn-primary y btn-dark
-// .btn-primary {
-//     background-color: cus.$primary;
-//     border-color: cus.$primary;
+hr {
+    @include mix.custom-hr();
+  
+    
+    &:hover {
+        @include mix.powerOnAnimation('powerOn', 2s, ease-in-out);
+      }
 
-//     &:hover {
-//         background-color: cus.$primary-hover;
-//         border-color: cus.$primary-hover;
-//     }
-// }
+}
 
-// .btn-dark {
-//     background-color: cus.$dark;
-//     border-color: cus.$dark;
-
-//     &:hover {
-//         background-color: cus.$dark-hover;
-//         border-color: cus.$dark-hover;
-//     }
-// }
 

@@ -2,29 +2,76 @@
 
 // Variables propias
 $azul: #38b6ff;
-// $azul-oscuro: #1c2256;
-// $oscuro: #0a1015;
-// $oscuro-hover: #1b2d3b;
-// $gris: #999ea2;
-// $fondo: #eaeff4;
+$amarillo: #ffde59;
+$gris-claro: #ededed;
+
+
+$spacing: 2rem;
 
 // Reescribimos variables de bootstrap
 // Colores
 $primary: $azul;
-// $primary-hover: $azul-oscuro;
-// $secondary: $gris;
-// $dark: $oscuro;
-// $dark-hover: $oscuro-hover;
+$warning: $amarillo;
+$light: $gris-claro;
 
-// $light: $fondo;
+// Tamaños media-queries  
+$small: 480px;
+$medium: 768px;
+$big: 1024px;
 
-// // Tipografías
-// $font-size-base: 0.95rem;
-// $font-family-sans-serif: 'Manrope', sans-serif;
-// $form-label-font-size: 0.8rem; 
+// Importa las fuentes
+// Definir las fuentes locales utilizando @font-face
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+  
+// Sobreescribimos las variables de Bootstrap con nuestras fuentes
+$font-family-sans-serif: 'Quicksand', sans-serif;
+$font-weight-light: 300; // Light
+$font-weight-regular: 400; // Regular
+$font-weight-medium: 500; // Medium
+$font-weight-semibold: 600; // Semibold
+$font-weight-bold: 700; // Bold
+
+// Otros ajustes de tipografía
+$font-size-base: 1.2rem;
+// $form-label-font-size: 0.8rem;
 
 // // Cards
 // $card-border-color: transparent;
+
 
 // Importamos Bootstrap de node_modules
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';

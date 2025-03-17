@@ -1,0 +1,64 @@
+@use '../custom/custom' as cus;
+@use '../custom/mixins' as mix;
+
+// Modifica el espaciado de las letras del formulario
+.card-header {
+    letter-spacing: 0.1em;
+}
+
+.number {
+    width: 35%;
+}
+
+.flip-card {
+    perspective: 1000px;
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    color: white;
+    font-weight: bold;
+}
+
+.flip-card-back {
+    color: black;
+    transform: rotateY(180deg);
+    padding: 10px;
+    text-align: center;
+    
+}
+
+@include mix.mobile {
+    .flip-card {
+        padding: 0 3rem;
+        width: 350px;
+        margin: auto; 
+    }
+}
+// @media (max-width: 768px) {
+    
+// }
+
