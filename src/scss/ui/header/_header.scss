@@ -2,9 +2,9 @@
 @use '../custom/mixins' as mix;
 
 header {
-    height: 100vh;
     min-height: -webkit-fill-available; 
     padding-bottom: 0;
+    height: calc(100vh - 56px);
 }
 
 .logo {
@@ -54,6 +54,11 @@ header {
 
 /* Ajuste para pantallas más pequeñas */
 @include mix.mobile {
+
+    header {
+    height: 100vh;
+        
+    }
 
     /* Logo */
     .logo {
