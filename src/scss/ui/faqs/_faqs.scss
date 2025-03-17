@@ -1,19 +1,92 @@
 @use '../custom/custom' as cus;
 @use '../custom/mixins' as mix;
 
-.nav-tabs .nav-link.active {
-    background-color: cus.$warning;
-    border-color: cus.$warning;
+// .nav-tabs .nav-link.active {
+//     background-color: cus.$warning;
+//     border-color: cus.$warning;
+// }
+
+// .nav-tabs {
+//     border-color: cus.$warning;
+// }
+
+// .nav-tabs .nav-link:hover {
+//     background-color: transparent;
+//     border: none;
+//     color: cus.$primary !important;
+// }
+
+// .tab-content {
+//     border: 1.5px solid cus.$warning;
+//     border-top: none;
+//     border-bottom-left-radius: 0.5rem;
+//     border-bottom-right-radius: 0.5rem;
+// }
+
+// .tab-content h5 {
+//     cursor: pointer;
+// }
+
+
+/* Estilo para los botones */
+.btn-group {
+    width: 100%;
 }
 
-.nav-tabs {
-    border-color: cus.$warning;
+.btn-group .btn {
+    border-bottom: 1.5px solid cus.$warning;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    width: auto;
+    color: black;
 }
 
-.nav-tabs .nav-link:hover {
-    background-color: transparent;
-    border: none;
-    color: cus.$primary !important;
+.btn-group .btn:hover {
+    color: cus.$primary;
+    border-color: cus.$primary;
+}
+
+/* Mejorar la experiencia en pantallas pequeñas */
+@include mix.mobile {
+    .btn-group .btn {
+        padding: 1.25rem;
+        font-size: 1.1rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Estilo para el contenido de las pestañas */
+.tab-content {
+    border: 1.5px solid cus.$warning;
+    border-top: none;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.tab-pane {
+    display: none; /* Ocultamos por defecto el contenido de las pestañas */
+}
+
+.tab-pane.show {
+    display: block; /* Mostramos el contenido activo */
+}
+
+.tab-pane.active {
+    /* Esto es opcional si deseas que el contenido tenga alguna animación */
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación de fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .tab-content {

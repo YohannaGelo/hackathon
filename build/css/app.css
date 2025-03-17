@@ -13386,6 +13386,10 @@ header {
   .logo-sidebar {
     max-width: 70%;
   }
+
+  .nav-link:hover {
+    min-width: max-content;
+  }
 }
 @media screen and (min-width: 768px) {
   .nav-link:hover {
@@ -13504,21 +13508,67 @@ header {
   font-size: 1.2rem;
 }
 
-.nav-tabs .nav-link.active {
-  background-color: #ffde59;
-  border-color: #ffde59;
+/* Estilo para los botones */
+.btn-group {
+  width: 100%;
 }
 
-.nav-tabs {
-  border-color: #ffde59;
+.btn-group .btn {
+  border-bottom: 1.5px solid #ffde59;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  width: auto;
+  color: black;
 }
 
-.nav-tabs .nav-link:hover {
-  background-color: transparent;
-  border: none;
-  color: #38b6ff !important;
+.btn-group .btn:hover {
+  color: #38b6ff;
+  border-color: #38b6ff;
 }
 
+/* Mejorar la experiencia en pantallas pequeñas */
+@media screen and (min-width: 480px) {
+  .btn-group .btn {
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+  }
+}
+/* Estilo para el contenido de las pestañas */
+.tab-content {
+  border: 1.5px solid #ffde59;
+  border-top: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.tab-pane {
+  display: none;
+  /* Ocultamos por defecto el contenido de las pestañas */
+}
+
+.tab-pane.show {
+  display: block;
+  /* Mostramos el contenido activo */
+}
+
+.tab-pane.active {
+  /* Esto es opcional si deseas que el contenido tenga alguna animación */
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animación de fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .tab-content {
   border: 1.5px solid #ffde59;
   border-top: none;

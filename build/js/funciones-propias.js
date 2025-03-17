@@ -2,6 +2,7 @@
 function init() {
     handleSidebarVisibility();   // Maneja la visibilidad del menú lateral al hacer scroll
     handleScrollToTopButton();   // Muestra u oculta el botón de "subir" según el scroll
+    changeTab('evento');  // Llama a la función changeTab y pasa el id de la pestaña que quieres activar inicialmente
 }
 
 // Detectamos el scroll y mostramos el menú lateral cuando se supera un umbral
@@ -39,6 +40,25 @@ function handleScrollToTopButton() {
     scrollToTopBtn.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave hacia arriba
     });
+}
+
+
+function changeTab(tabId) {
+    // Ocultar todos los contenidos de las pestañas
+    const tabContents = document.querySelectorAll('.tab-pane');
+    tabContents.forEach(content => content.classList.remove('show', 'active'));
+
+    // Eliminar la clase 'active' de todos los botones
+    const tabButtons = document.querySelectorAll('.btn-group .btn');
+    tabButtons.forEach(button => button.classList.remove('active'));
+
+    // Mostrar el contenido correspondiente a la pestaña seleccionada
+    const selectedTab = document.getElementById(tabId);
+    selectedTab.classList.add('show', 'active');
+
+    // Activar el botón correspondiente
+    const selectedButton = document.getElementById(tabId + '-btn');
+    selectedButton.classList.add('active');
 }
 
 
