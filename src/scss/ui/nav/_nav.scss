@@ -51,14 +51,16 @@
     margin-left: 7rem;
 }
 
+.section-name {
+    display: none;
+}
+
 .nav-link:hover .nav-icon {
     color: black;
 
 }
 
-.section-name {
-    display: none;
-}
+
 
 .nav-link:hover {
     // min-width: max-content;
@@ -68,6 +70,7 @@
 .nav-link:hover .section-name {
     display: block;
 }
+
 
 
 /* Ajuste para pantallas más pequeñas */

@@ -16,6 +16,34 @@ header {
     @include mix.powerOnAnimation('powerOn', 3s, ease-in-out);
 }
 
+/* Flecha parpadeante */
+// .arrow-container {
+//     margin: 20px 0; /* Espaciado entre las imágenes */
+// }
+
+.arrow {
+    opacity: 0;
+    animation: blink 2s infinite;
+    animation-delay: 2.5s;
+
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+
 /* Imagen skyline */
 .skyline {
     max-width: 100%;

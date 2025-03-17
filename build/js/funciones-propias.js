@@ -41,6 +41,7 @@ function handleScrollToTopButton() {
     });
 }
 
+
 // Llamar a la función de inicialización al cargar la página
 window.onload = init;
 
