@@ -3,7 +3,8 @@
 
 header {
     padding-bottom: 0;
-    height: calc(100vh - 56px);
+    // height: calc(100vh - 56px);
+    height: 100dvh;
 }
 
 .logo {
@@ -93,7 +94,6 @@ header {
     /* Logo */
     .logo {
         margin-top: cus.$spacing;
-
         width: 45%;
 
     }
@@ -110,7 +110,6 @@ header {
     /* Logo */
     .logo {
         margin-top: cus.$spacing;
-
         width: 35%;
 
     }

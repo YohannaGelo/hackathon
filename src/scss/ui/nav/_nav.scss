@@ -48,6 +48,7 @@
     background-color: cus.$warning;
     color: black;
     padding-left: cus.$spacing;
+    margin-left: 7rem;
 }
 
 .nav-link:hover .nav-icon {
@@ -60,7 +61,8 @@
 }
 
 .nav-link:hover {
-    min-width: max-content;
+    // min-width: max-content;
+    width: 10.5rem;
 }
 
 .nav-link:hover .section-name {
@@ -81,9 +83,16 @@
 
     }
 
+    
 
 }
 
+@include mix.tablet {
+    .nav-link:hover {
+        padding-left: cus.$spacing;
+        margin-left: 0;
+    }
+}
 
 @include mix.desktop {
 
@@ -104,8 +113,10 @@
     }
 
     .sidebar {
-        width: 20%; /* Aumentar el ancho para que las opciones no se oculten */
-        left: -20%; /* Ocultar inicialmente */
+        width: 20%;
+        /* Aumentar el ancho para que las opciones no se oculten */
+        left: -20%;
+        /* Ocultar inicialmente */
         gap: 0 !important;
     }
 

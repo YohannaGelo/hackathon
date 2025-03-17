@@ -13173,7 +13173,7 @@ hr:hover {
 
 header {
   padding-bottom: 0;
-  height: calc(100vh - 56px);
+  height: 100dvh;
 }
 
 .logo {
@@ -13338,6 +13338,7 @@ header {
   background-color: #ffde59;
   color: black;
   padding-left: 2rem;
+  margin-left: 7rem;
 }
 
 .nav-link:hover .nav-icon {
@@ -13349,7 +13350,7 @@ header {
 }
 
 .nav-link:hover {
-  min-width: max-content;
+  width: 10.5rem;
 }
 
 .nav-link:hover .section-name {
@@ -13365,6 +13366,12 @@ header {
 
   .logo-sidebar {
     max-width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-link:hover {
+    padding-left: 2rem;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1024px) {
