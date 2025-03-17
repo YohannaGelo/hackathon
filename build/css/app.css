@@ -13281,13 +13281,30 @@ header {
     width: 100%;
   }
 }
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  /* Logo */
+  .logo {
+    margin-top: 2rem;
+    width: 45%;
+  }
+
+  /* Skyline */
+  .skyline {
+    height: auto;
+    width: 100%;
+  }
+}
 /* Solo se necesita para el comportamiento de la barra lateral */
 .sidebar {
   transition: 0.3s ease-in-out;
   width: 15%;
   left: -15%;
+  min-height: max-content;
   /* Oculto inicialmente */
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar.show {
@@ -13368,6 +13385,12 @@ header {
     /* Aumentar el ancho para que las opciones no se oculten */
     left: -20%;
     /* Ocultar inicialmente */
+    gap: 0 !important;
+  }
+
+  .nav-link {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 /* Sobreescribo las medidas del container-sm de bootstrap */

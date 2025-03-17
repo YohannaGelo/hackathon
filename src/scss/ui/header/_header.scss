@@ -104,3 +104,20 @@ header {
         width: 100%;
     }
 }
+
+@include mix.tablet-horizontal {
+
+    /* Logo */
+    .logo {
+        margin-top: cus.$spacing;
+
+        width: 45%;
+
+    }
+
+    /* Skyline */
+    .skyline {
+        height: auto;
+        width: 100%;
+    }
+}
