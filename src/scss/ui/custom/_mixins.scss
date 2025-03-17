@@ -67,13 +67,14 @@
 }
 
 
-
-@mixin custom-hr($height: 4rem, $width: 100%) {
+// Personalización hr
+@mixin custom-hr($height: 4rem, $width: 100%, $size: auto, $repeat: repeat) {
     border: none;
     height: $height;
     background-image: url(../img/hr.svg);
-    background-size: auto;
+    background-size: $size;
     background-position: center;
+    background-repeat: $repeat;
     margin: cus.$spacing 0;
     width: $width;
     display: block;
@@ -82,6 +83,7 @@
     filter: drop-shadow(2px 2px 5px rgba(60, 60, 60, 0.2));
 }
 
+// Animación de logo y hr
 @mixin powerOnAnimation($name: 'powerOn', $duration: 2s, $timing: ease-in-out) {
     @keyframes #{$name} {
       0% {

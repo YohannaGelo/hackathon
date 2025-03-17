@@ -1,0 +1,28 @@
+@use '../custom/custom' as cus;
+@use '../custom/mixins' as mix;
+
+.nav-tabs .nav-link.active {
+    background-color: cus.$warning;
+    border-color: cus.$warning;
+}
+
+.nav-tabs {
+    border-color: cus.$warning;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border: none;
+    color: cus.$primary !important;
+}
+
+.tab-content {
+    border: 1.5px solid cus.$warning;
+    border-top: none;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.tab-content h5 {
+    cursor: pointer;
+}

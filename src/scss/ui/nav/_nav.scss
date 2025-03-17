@@ -71,3 +71,14 @@
     
 }
 
+
+@include mix.desktop {
+
+    .nav-link {
+        font-size: 2rem !important;
+        padding-left: 3rem !important;
+    }
+
+    
+}
+

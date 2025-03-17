@@ -4595,7 +4595,7 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-color: transparent;
   --bs-card-border-radius: var(--bs-border-radius);
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
@@ -13086,12 +13086,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 hr {
   border: none;
   height: 4rem;
   background-image: url(../img/hr.svg);
   background-size: auto;
   background-position: center;
+  background-repeat: repeat;
   margin: 2rem 0;
   width: 100%;
   display: block;
@@ -13128,6 +13133,42 @@ hr:hover {
     opacity: 1;
     filter: brightness(1);
   }
+}
+
+.mini-hr {
+  border: none;
+  height: 2rem;
+  background-image: url(../img/hr.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem 0;
+  width: 25%;
+  display: block;
+  z-index: 10;
+  opacity: 100%;
+  filter: drop-shadow(2px 2px 5px rgba(60, 60, 60, 0.2));
+  margin: 0 0 0.5rem 0;
+}
+
+.img-logo {
+  height: 100px;
+  width: auto;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.contact {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.contact:hover {
+  color: #ffde59 !important;
+  transform: scale(1.1);
+}
+
+/* Flecha subir Inicio */
+#scrollToTopBtn:hover {
+  background-color: #f2c200;
+  transform: scale(1.1);
 }
 
 .logo {
@@ -13172,11 +13213,11 @@ hr:hover {
   }
   80% {
     transform: translateY(-10%);
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 .skyline {
@@ -13186,7 +13227,6 @@ hr:hover {
   animation: skylineEnter 0.8s ease-out forwards;
   animation-delay: 1.5s;
   opacity: 0;
-  /* Empieza invisible */
   position: relative;
   bottom: 0;
   filter: drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59);
@@ -13294,6 +13334,12 @@ hr:hover {
     max-width: 70%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .nav-link {
+    font-size: 2rem !important;
+    padding-left: 3rem !important;
+  }
+}
 /* Sobreescribo las medidas del container-sm de bootstrap */
 .container-sm {
   max-width: 70%;
@@ -13377,6 +13423,32 @@ hr:hover {
   opacity: 100%;
   padding: 10px;
   font-size: 1.2rem;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #ffde59;
+  border-color: #ffde59;
+}
+
+.nav-tabs {
+  border-color: #ffde59;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: transparent;
+  border: none;
+  color: #38b6ff !important;
+}
+
+.tab-content {
+  border: 1.5px solid #ffde59;
+  border-top: none;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.tab-content h5 {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map */
