@@ -13281,11 +13281,11 @@ header {
     width: 100%;
   }
 }
-@media screen and (orientation: landscape) and (max-width: 1024px) {
+@media screen and (orientation: landscape) and (max-width: 992px) {
   /* Logo */
   .logo {
     margin-top: 2rem;
-    width: 45%;
+    width: 35%;
   }
 
   /* Skyline */
@@ -13374,7 +13374,7 @@ header {
   }
 }
 /* Ajuste específico para pantallas en modo horizontal en dispositivos móviles */
-@media screen and (orientation: landscape) and (max-width: 1024px) {
+@media screen and (orientation: landscape) and (max-width: 992px) {
   .logo-sidebar {
     margin: 0;
     max-width: 70%;
