@@ -13171,6 +13171,12 @@ hr:hover {
   transform: scale(1.1);
 }
 
+header {
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  padding-bottom: 0;
+}
+
 .logo {
   max-width: 1500px;
   margin-top: 40%;
@@ -13206,6 +13212,19 @@ hr:hover {
   }
 }
 
+/* Imagen skyline */
+.skyline {
+  max-width: 100%;
+  height: 30%;
+  object-fit: cover;
+  animation: skylineEnter 0.8s ease-out forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+  position: relative;
+  bottom: 0;
+  filter: drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59);
+}
+
 @keyframes skylineEnter {
   0% {
     transform: translateY(100%);
@@ -13220,18 +13239,6 @@ hr:hover {
     opacity: 0.8;
   }
 }
-.skyline {
-  max-width: 100%;
-  height: 30%;
-  object-fit: cover;
-  animation: skylineEnter 0.8s ease-out forwards;
-  animation-delay: 1.5s;
-  opacity: 0;
-  position: relative;
-  bottom: 0;
-  filter: drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59);
-}
-
 /* Ajuste para pantallas más pequeñas */
 @media screen and (min-width: 480px) {
   /* Logo */
