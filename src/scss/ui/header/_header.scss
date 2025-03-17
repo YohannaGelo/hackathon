@@ -2,7 +2,6 @@
 @use '../custom/mixins' as mix;
 
 header {
-    min-height: -webkit-fill-available; 
     padding-bottom: 0;
     height: calc(100vh - 56px);
 }
@@ -56,8 +55,9 @@ header {
 @include mix.mobile {
 
     header {
-    height: 100vh;
-        
+        height: 100vh;
+        min-height: -webkit-fill-available;
+
     }
 
     /* Logo */
