@@ -18,8 +18,16 @@ hr {
 }
 
 .mini-hr {
-  @include mix.custom-hr(2rem, 25%, contain, no-repeat);
+  @include mix.custom-hr(2rem, 50%, contain, no-repeat);
   margin: 0 0 0.5rem 0;
+}
+
+@include mix.mobile {
+  .mini-hr {
+    @include mix.custom-hr(2.5rem, 25%, contain, no-repeat);
+    
+  }
+
 }
 
 .img-logo {

@@ -13143,7 +13143,7 @@ hr:hover {
   background-position: center;
   background-repeat: no-repeat;
   margin: 2rem 0;
-  width: 25%;
+  width: 50%;
   display: block;
   z-index: 10;
   opacity: 100%;
@@ -13151,6 +13151,22 @@ hr:hover {
   margin: 0 0 0.5rem 0;
 }
 
+@media screen and (min-width: 480px) {
+  .mini-hr {
+    border: none;
+    height: 2.5rem;
+    background-image: url(../img/hr.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2rem 0;
+    width: 25%;
+    display: block;
+    z-index: 10;
+    opacity: 100%;
+    filter: drop-shadow(2px 2px 5px rgba(60, 60, 60, 0.2));
+  }
+}
 .img-logo {
   height: 100px;
   width: auto;
@@ -13362,12 +13378,18 @@ header {
     left: -20% !important;
   }
 
-  .nav-link {
-    padding-left: 0.2rem;
-  }
   .nav-link:hover {
     opacity: 1;
     width: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-link {
+    padding-left: 0.2rem;
+  }
+
+  .logo-sidebar {
+    width: 60%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -13434,10 +13456,43 @@ header {
   text-align: center;
 }
 
+.card-header {
+  width: 300px !important;
+}
+
 @media screen and (min-width: 480px) {
-  .flip-card {
-    padding: 0 3rem;
-    width: 350px;
+  .flip-card-inner {
+    width: 300px !important;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-header {
+    width: 250px !important;
+  }
+
+  .flip-card-inner {
+    width: 250px !important;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-header {
+    width: 280px !important;
+  }
+
+  .flip-card-inner {
+    width: 280px !important;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-header {
+    width: 330px !important;
+  }
+
+  .flip-card-inner {
+    width: 330px !important;
     margin: auto;
   }
 }
@@ -13480,11 +13535,9 @@ header {
 }
 
 .btn-group .btn:hover {
-  color: #38b6ff;
-  border-color: #38b6ff;
+  font-weight: bold;
 }
 
-/* Mejorar la experiencia en pantallas pequeñas */
 @media screen and (min-width: 480px) {
   .btn-group .btn {
     padding: 1.25rem;
@@ -13503,7 +13556,6 @@ header {
 
 .tab-pane {
   display: none;
-  /* Ocultamos por defecto el contenido de las pestañas */
 }
 
 .tab-pane.show {
@@ -13512,7 +13564,6 @@ header {
 }
 
 .tab-pane.active {
-  /* Esto es opcional si deseas que el contenido tenga alguna animación */
   animation: fadeIn 0.3s ease;
 }
 
@@ -13534,6 +13585,12 @@ header {
 
 .tab-content h5 {
   cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .btn-group .btn {
+    font-size: 1.4rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -51,14 +51,49 @@
     
 }
 
+.card-header {
+    width: 300px !important;
+}
+
 @include mix.mobile {
-    .flip-card {
-        padding: 0 3rem;
-        width: 350px;
+    .flip-card-inner {
+        width: 300px !important;
         margin: auto; 
     }
 }
-// @media (max-width: 768px) {
-    
-// }
 
+@include mix.tablet {
+
+    .card-header {
+        width: 250px !important;
+    }
+
+    .flip-card-inner {
+        width: 250px !important;
+        margin: auto; 
+    }
+}
+
+@include mix.desktop {
+
+    .card-header {
+        width: 280px !important;
+    }
+
+    .flip-card-inner {
+        width: 280px !important;
+        margin: auto; 
+    }
+}
+
+@include mix.big-desktop {
+
+    .card-header {
+        width: 330px !important;
+    }
+
+    .flip-card-inner {
+        width: 330px !important;
+        margin: auto; 
+    }
+}
