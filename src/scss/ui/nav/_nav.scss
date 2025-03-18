@@ -1,133 +1,88 @@
 @use '../custom/custom' as cus;
 @use '../custom/mixins' as mix;
 
-/* Solo se necesita para el comportamiento de la barra lateral */
 .sidebar {
     transition: 0.3s ease-in-out;
     width: 15%;
-    left: -15%;
-    min-height: max-content;
-    /* Oculto inicialmente */
+    left: -15% !important;
     z-index: 100;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.sidebar.show {
-    left: 0;
-    /* Muestra el menú cuando tiene la clase "show" */
+    &.show {
+        left: 0 !important;
+    }
 }
 
 .logo-sidebar {
-    margin: cus.$spacing 0;
     max-width: 100%;
     transition: transform 0.3s ease;
-}
 
-.logo-sidebar:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos base para el nav-link */
-.nav-icon {
-    color: cus.$warning;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-}
-
-.nav-link {
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, padding-left 0.3s ease;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-}
-
-.nav-link:hover {
-    transform: scale(1.1);
-    background-color: cus.$warning;
-    color: black;
-    padding-left: cus.$spacing;
-    margin-left: 7rem;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .section-name {
     display: none;
 }
 
-.nav-link:hover .nav-icon {
-    color: black;
+.nav-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
+    &:hover {
+        transform: scale(1.1);
+        background-color: cus.$warning;
+        color: black;
+
+        opacity: 0.8;
+        width: max-content;
+
+        i {
+            color: black !important;
+        }
+
+        .section-name {
+            display: block;
+        }
+    }
+
+    
 }
 
-
-
-.nav-link:hover {
-    // min-width: max-content;
-    width: 10.5rem;
-}
-
-.nav-link:hover .section-name {
-    display: block;
-}
-
-
-
-/* Ajuste para pantallas más pequeñas */
+// Estilos responsivos específicos
 @include mix.mobile {
-
     .sidebar {
-        width: 20%;
-        left: -20%;
+        width: 20%  !important;
+        left: -20% !important;
     }
 
-    .logo-sidebar {
-        max-width: 70%;
+    .nav-link {
+        padding-left: 0.2rem;
 
+        &:hover {
+            opacity: 1;
+            width: initial;
+        }
     }
-
-    .nav-link:hover {
-        min-width: max-content;
-    }
-
 }
 
 @include mix.tablet {
-    .nav-link:hover {
-        padding-left: cus.$spacing;
-        margin-left: 0;
-    }
+
+    
+
 }
 
 @include mix.desktop {
-
     .nav-link {
-        font-size: 2rem !important;
-        padding-left: 3rem !important;
+        padding-left: 1.5rem;
+        
     }
 
-
-}
-
-/* Ajuste específico para pantallas en modo horizontal en dispositivos móviles */
-@include mix.tablet-horizontal {
     .logo-sidebar {
-        margin: 0;
-        max-width: 70%;
-
+        width: 70%;
     }
-
-    .sidebar {
-        width: 20%;
-        /* Aumentar el ancho para que las opciones no se oculten */
-        left: -20%;
-        /* Ocultar inicialmente */
-        gap: 0 !important;
-    }
-
-    .nav-link {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
 }
