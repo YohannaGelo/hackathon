@@ -4,12 +4,16 @@
   "description": "Página para el concurso Hackathon intercentros que se desarrolla cada año en Utrera ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilar:sass": "sass --watch src/scss:build/css",
+    "purgar": "purgecss --css build/css/styles.css --content index.html --output build/css/styles.min.css",
+    "purgar2": "purgecss -css build/css/styles.css -con index.html -o build/css/styles.min.css"
   },
   "author": "Yohanna Gelo",
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^5.3.3",
+    "purgecss": "^7.0.2",
     "sass": "^1.85.1"
   }
 }

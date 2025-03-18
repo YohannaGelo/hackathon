@@ -13404,21 +13404,21 @@ header {
 }
 
 @media screen and (min-width: 480px) {
-  .nav {
-    align-items: flex-start;
+  .nav:hover {
+    align-items: center;
+    width: 100% !important;
   }
   .nav:hover .nav-link {
-    width: 100% !important;
+    margin: 0.2rem 0 !important;
+    width: 140% !important;
+  }
+  .nav:hover .nav-link:hover {
+    width: initial;
   }
 
   .sidebar {
     width: 20% !important;
     left: -20% !important;
-  }
-
-  .nav-link:hover {
-    opacity: 1 !important;
-    width: initial;
   }
 }
 @media screen and (min-width: 768px) {
@@ -13439,6 +13439,7 @@ header {
   .nav:hover .nav-link {
     margin: 0.2rem 0 !important;
     width: 117% !important;
+    opacity: 1 !important;
   }
 
   .logo-sidebar {

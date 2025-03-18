@@ -71,20 +71,29 @@
 }
 
 
-
-
-
 // Estilos responsivos específicos
 @include mix.mobile {
 
     .nav {
-        align-items: flex-start;
+        // align-items: flex-start;
 
         &:hover {
+            align-items: center;
+
+            width: 100% !important;
 
             .nav-link {
-                width: 100% !important;
+                margin: 0.2rem 0 !important;
+                width: 140% !important;
+
+                &:hover {
+                    width: initial;
+                }
             }
+
+            // .nav-link {
+            //     width: 100% !important;
+            // }
         }
 
     }
@@ -95,12 +104,7 @@
 
     }
 
-    .nav-link {
-        &:hover {
-            opacity: 1 !important;
-            width: initial;
-        }
-    }
+    // .nav-link {}
 }
 
 @include mix.tablet {
@@ -123,7 +127,7 @@
             .nav-link {
                 margin: 0.2rem 0 !important;
                 width: 117% !important;
-
+                opacity: 1 !important;
             }
         }
 
@@ -205,7 +209,7 @@
                 i {
                     font-size: 1.5rem !important;
                     margin-right: 1rem;
-        
+
                 }
             }
         }
