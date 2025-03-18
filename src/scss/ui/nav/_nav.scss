@@ -86,7 +86,6 @@
             }
         }
 
-
     }
 
     .sidebar {
@@ -106,34 +105,28 @@
 @include mix.tablet {
 
     .nav {
-        display:flex;
+        display: flex;
         flex-direction: column;
         width: 100% !important;
 
-
         &:hover {
-            
-            
+
             width: 100% !important;
 
-
             .nav-link {
+                margin: 0.4rem 0 !important;
                 width: 100% !important;
-            }
 
-    
+            }
         }
 
-
     }
-
-   
 
     .logo-sidebar {
         width: 60%;
     }
 
-    
+
 
 }
 
@@ -155,14 +148,12 @@
     }
 
     .nav {
-
         align-items: center;
 
         &:hover {
-            align-items: center;
-
             .nav-link {
                 width: 100% !important;
+                margin: 0.4rem 0 !important;
             }
         }
     }
@@ -187,17 +178,17 @@
 
     .nav-link {
         width: 100% !important;
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem !important;
 
         i {
-        font-size: 1.3rem !important;
-        margin-right: 1rem;
+            font-size: 1.5rem !important;
+            margin-right: 1rem;
 
         }
     }
 
     .section-name {
-        font-size: 1rem !important;
+        font-size: 1.3rem !important;
 
     }
 }
