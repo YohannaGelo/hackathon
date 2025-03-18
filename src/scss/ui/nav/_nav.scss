@@ -202,21 +202,21 @@
     }
 }
 
-@include mix.big-desktop {
+// @include mix.big-desktop {
 
-    .nav-link {
-        width: 100% !important;
-        margin-bottom: cus.$spacing;
+//     .nav-link {
+//         width: 100% !important;
+//         margin-bottom: cus.$spacing;
 
-        i {
-        font-size: 2rem !important;
-        margin-right: cus.$spacing;
+//         i {
+//         font-size: 2rem !important;
+//         margin-right: cus.$spacing;
 
-        }
-    }
+//         }
+//     }
 
-    .section-name {
-        font-size: 1.5rem !important;
+//     .section-name {
+//         font-size: 1.5rem !important;
 
-    }
-}
+//     }
+// }

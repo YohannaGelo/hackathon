@@ -13469,20 +13469,6 @@ header {
     font-size: 1.2rem !important;
   }
 }
-@media screen and (min-width: 1200px) {
-  .nav-link {
-    width: 100% !important;
-    margin-bottom: 2rem;
-  }
-  .nav-link i {
-    font-size: 2rem !important;
-    margin-right: 2rem;
-  }
-
-  .section-name {
-    font-size: 1.5rem !important;
-  }
-}
 /* Sobreescribo las medidas del container-sm de bootstrap */
 .container-sm {
   max-width: 70%;
@@ -13584,15 +13570,15 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .card-header {
-    width: 330px !important;
+    width: 300px !important;
   }
 
   .flip-card-front, .flip-card-back {
-    width: 330px !important;
+    width: 300px !important;
   }
 
   .flip-card-inner {
-    width: 330px !important;
+    width: 300px !important;
   }
 }
 .carousel-item img {
