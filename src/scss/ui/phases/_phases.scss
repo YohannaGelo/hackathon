@@ -105,18 +105,18 @@
     }
 }
 
-@include mix.big-desktop {
+// @include mix.big-desktop {
 
-    .card-header {
-        width: 300px !important;
-    }
+//     .card-header {
+//         width: 300px !important;
+//     }
 
-    .flip-card-front, .flip-card-back {
-        width: 300px !important;
-    }
+//     .flip-card-front, .flip-card-back {
+//         width: 300px !important;
+//     }
 
 
-    .flip-card-inner {
-        width: 300px !important;
-    }
-}
+//     .flip-card-inner {
+//         width: 300px !important;
+//     }
+// }
