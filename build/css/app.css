@@ -13189,12 +13189,13 @@ hr:hover {
 
 header {
   padding-bottom: 0;
-  height: 100dvh;
+  height: 100dvh !important;
+  min-height: -webkit-fill-available;
 }
 
 .logo {
   max-width: 1500px;
-  margin-top: 40%;
+  margin-top: 25%;
   width: 90%;
   opacity: 0;
   animation: powerOn 3s ease-in-out;
@@ -13228,7 +13229,12 @@ header {
 }
 
 /* Flecha parpadeante */
+.arrow-container {
+  margin: 25% 0 !important;
+}
+
 .arrow {
+  font-size: 3rem;
   opacity: 0;
   animation: blink 2s infinite;
   animation-delay: 2.5s;
@@ -13275,20 +13281,19 @@ header {
 }
 /* Ajuste para pantallas más pequeñas */
 @media screen and (min-width: 480px) {
-  header {
-    height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-
   /* Logo */
   .logo {
-    margin-top: 20%;
+    margin-top: 30%;
     width: 80%;
   }
 
   /* Skyline */
   .skyline {
     height: 35%;
+  }
+
+  .arrow {
+    font-size: 5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -13310,6 +13315,14 @@ header {
     width: 45%;
   }
 
+  .arrow-container {
+    margin: 0 !important;
+  }
+
+  .arrow {
+    font-size: 4rem;
+  }
+
   /* Skyline */
   .skyline {
     height: auto;
@@ -13323,10 +13336,20 @@ header {
     width: 35%;
   }
 
+  .arrow-container {
+    margin: 0 !important;
+    height: 4% !important;
+    width: auto;
+  }
+
   /* Skyline */
   .skyline {
     height: auto;
     width: 100%;
+  }
+
+  .arrow {
+    font-size: 1rem;
   }
 }
 .sidebar {
@@ -13362,23 +13385,21 @@ header {
   display: block;
 }
 .nav:hover .nav-link {
-  width: max-content !important;
-}
-
-.nav-link {
   transition: transform 0.3s ease, color 0.3s ease;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: max-content !important;
+  margin: 0.3rem 0 !important;
 }
-.nav-link:hover {
+.nav:hover .nav-link:hover {
   transform: scale(1.1);
   background-color: #ffde59;
   color: black;
   opacity: 0.8;
 }
-.nav-link:hover i {
+.nav:hover .nav-link:hover i {
   color: black !important;
 }
-.nav-link:hover .section-name {
+.nav:hover .nav-link:hover .section-name {
   display: block;
 }
 
@@ -13396,26 +13417,32 @@ header {
   }
 
   .nav-link:hover {
-    opacity: 1;
+    opacity: 1 !important;
     width: initial;
   }
 }
 @media screen and (min-width: 768px) {
+  .logo-container {
+    text-align: center;
+  }
+
   .nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100% !important;
   }
   .nav:hover {
+    align-items: center;
     width: 100% !important;
   }
   .nav:hover .nav-link {
-    margin: 0.4rem 0 !important;
-    width: 100% !important;
+    margin: 0.2rem 0 !important;
+    width: 117% !important;
   }
 
   .logo-sidebar {
-    width: 60%;
+    width: 65%;
   }
 }
 @media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 1023px) {
@@ -13447,6 +13474,10 @@ header {
   }
 }
 @media screen and (min-width: 1024px) {
+  .logo-container {
+    text-align: start;
+  }
+
   .nav-link {
     padding-left: 1.5rem;
   }
@@ -13455,11 +13486,21 @@ header {
     width: 70%;
   }
 
-  .nav-link {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100% !important;
+  }
+  .nav:hover {
+    width: 100% !important;
+  }
+  .nav:hover .nav-link {
+    margin: 0.4rem 0 !important;
     width: 100% !important;
     margin-bottom: 0.2rem !important;
   }
-  .nav-link i {
+  .nav:hover .nav-link i {
     font-size: 1.5rem !important;
     margin-right: 1rem;
   }
