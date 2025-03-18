@@ -19,6 +19,7 @@
 .logo-sidebar {
     max-width: 100%;
     transition: transform 0.3s ease;
+    margin: cus.$spacing 0;
 
     &:hover {
         transform: scale(1.1);
@@ -27,6 +28,21 @@
 
 .section-name {
     display: none;
+}
+
+.nav {
+    align-items: center;
+
+    &:hover {
+        // align-items: flex-start;
+        display: block;
+
+        .nav-link {
+            width: max-content !important;
+        }
+    }
+
+
 }
 
 .nav-link {
@@ -39,7 +55,7 @@
         color: black;
 
         opacity: 0.8;
-        width: max-content;
+        // width: max-content;
 
         i {
             color: black !important;
@@ -48,22 +64,38 @@
         .section-name {
             display: block;
         }
+
+
     }
 
-    
+
 }
+
+
 
 // Estilos responsivos específicos
 @include mix.mobile {
+
+    .nav {
+        align-items: flex-start;
+
+        &:hover {
+
+            .nav-link {
+                width: 100% !important;
+            }
+        }
+
+
+    }
+
     .sidebar {
-        width: 20%  !important;
+        width: 20% !important;
         left: -20% !important;
-        
+
     }
 
     .nav-link {
-        // padding-left: 0.2rem;
-
         &:hover {
             opacity: 1;
             width: initial;
@@ -73,23 +105,118 @@
 
 @include mix.tablet {
 
-    .nav-link {
-        padding-left: 0.2rem;
+    .nav {
+        display:flex;
+        flex-direction: column;
+        width: 100% !important;
+
+
+        &:hover {
+            
+            
+            width: 100% !important;
+
+
+            .nav-link {
+                width: 100% !important;
+            }
+
+    
+        }
+
+
     }
+
+   
 
     .logo-sidebar {
         width: 60%;
     }
+
+    
+
+}
+
+@include mix.tablet-horizontal {
+
+    .logo-container {
+        text-align: center;
+    }
+
+    .logo-sidebar {
+        max-width: 60%;
+        transition: transform 0.3s ease;
+        margin: 0;
+    }
+
+    .nav-link {
+        padding: 0.2rem;
+        width: 100% !important;
+    }
+
+    .nav {
+
+        align-items: center;
+
+        &:hover {
+            align-items: center;
+
+            .nav-link {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .section-name {
+        font-size: 1rem !important;
+
+    }
+
 
 }
 
 @include mix.desktop {
     .nav-link {
         padding-left: 1.5rem;
-        
+
     }
 
     .logo-sidebar {
         width: 70%;
+    }
+
+    .nav-link {
+        width: 100% !important;
+        margin-bottom: cus.$spacing;
+
+        i {
+        font-size: 1.5rem !important;
+        margin-right: 1rem;
+
+        }
+    }
+
+    .section-name {
+        font-size: 1.2rem !important;
+
+    }
+}
+
+@include mix.big-desktop {
+
+    .nav-link {
+        width: 100% !important;
+        margin-bottom: cus.$spacing;
+
+        i {
+        font-size: 2rem !important;
+        margin-right: cus.$spacing;
+
+        }
+    }
+
+    .section-name {
+        font-size: 1.5rem !important;
+
     }
 }

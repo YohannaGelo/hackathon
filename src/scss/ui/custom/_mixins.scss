@@ -76,7 +76,7 @@
 
 // Mixin para pantallas en orientación horizontal (más ancho que alto)
 @mixin tablet-horizontal {
-  @media screen and (orientation: landscape) and (min-width: cus.$hor)  {
+  @media screen and (orientation: landscape) and (min-width: cus.$hor) and (max-width: 1023px) {
       @content;
   }
 }

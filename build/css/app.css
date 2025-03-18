@@ -13316,7 +13316,7 @@ header {
     width: 100%;
   }
 }
-@media screen and (orientation: landscape) and (min-width: 700px) {
+@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 1023px) {
   /* Logo */
   .logo {
     margin-top: 2rem;
@@ -13345,6 +13345,7 @@ header {
 .logo-sidebar {
   max-width: 100%;
   transition: transform 0.3s ease;
+  margin: 2rem 0;
 }
 .logo-sidebar:hover {
   transform: scale(1.1);
@@ -13352,6 +13353,16 @@ header {
 
 .section-name {
   display: none;
+}
+
+.nav {
+  align-items: center;
+}
+.nav:hover {
+  display: block;
+}
+.nav:hover .nav-link {
+  width: max-content !important;
 }
 
 .nav-link {
@@ -13363,7 +13374,6 @@ header {
   background-color: #ffde59;
   color: black;
   opacity: 0.8;
-  width: max-content;
 }
 .nav-link:hover i {
   color: black !important;
@@ -13373,6 +13383,13 @@ header {
 }
 
 @media screen and (min-width: 480px) {
+  .nav {
+    align-items: flex-start;
+  }
+  .nav:hover .nav-link {
+    width: 100% !important;
+  }
+
   .sidebar {
     width: 20% !important;
     left: -20% !important;
@@ -13384,12 +13401,50 @@ header {
   }
 }
 @media screen and (min-width: 768px) {
-  .nav-link {
-    padding-left: 0.2rem;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .nav:hover {
+    width: 100% !important;
+  }
+  .nav:hover .nav-link {
+    width: 100% !important;
   }
 
   .logo-sidebar {
     width: 60%;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 1023px) {
+  .logo-container {
+    text-align: center;
+  }
+
+  .logo-sidebar {
+    max-width: 60%;
+    transition: transform 0.3s ease;
+    margin: 0;
+  }
+
+  .nav-link {
+    padding: 0.2rem;
+    width: 100% !important;
+  }
+
+  .nav {
+    align-items: center;
+  }
+  .nav:hover {
+    align-items: center;
+  }
+  .nav:hover .nav-link {
+    width: 100% !important;
+  }
+
+  .section-name {
+    font-size: 1rem !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -13399,6 +13454,33 @@ header {
 
   .logo-sidebar {
     width: 70%;
+  }
+
+  .nav-link {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  .nav-link i {
+    font-size: 1.5rem !important;
+    margin-right: 1rem;
+  }
+
+  .section-name {
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-link {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  .nav-link i {
+    font-size: 2rem !important;
+    margin-right: 2rem;
+  }
+
+  .section-name {
+    font-size: 1.5rem !important;
   }
 }
 /* Sobreescribo las medidas del container-sm de bootstrap */
@@ -13423,7 +13505,7 @@ header {
 
 .flip-card-inner {
   position: relative;
-  width: 100%;
+  width: 250px !important;
   height: 200px;
   transform-style: preserve-3d;
   transition: transform 0.6s;
@@ -13435,7 +13517,7 @@ header {
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100%;
+  width: 250px !important;
   height: 100%;
   backface-visibility: hidden;
   display: flex;
@@ -13457,10 +13539,18 @@ header {
 }
 
 .card-header {
-  width: 300px !important;
+  width: 250px !important;
 }
 
 @media screen and (min-width: 480px) {
+  .card-header {
+    width: 300px !important;
+  }
+
+  .flip-card-front, .flip-card-back {
+    width: 300px !important;
+  }
+
   .flip-card-inner {
     width: 300px !important;
     margin: auto;
@@ -13471,9 +13561,12 @@ header {
     width: 250px !important;
   }
 
+  .flip-card-front, .flip-card-back {
+    width: 250px !important;
+  }
+
   .flip-card-inner {
     width: 250px !important;
-    margin: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -13481,9 +13574,12 @@ header {
     width: 280px !important;
   }
 
+  .flip-card-front, .flip-card-back {
+    width: 280px !important;
+  }
+
   .flip-card-inner {
     width: 280px !important;
-    margin: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -13491,9 +13587,12 @@ header {
     width: 330px !important;
   }
 
+  .flip-card-front, .flip-card-back {
+    width: 330px !important;
+  }
+
   .flip-card-inner {
     width: 330px !important;
-    margin: auto;
   }
 }
 .carousel-item img {
