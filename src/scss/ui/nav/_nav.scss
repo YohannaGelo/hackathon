@@ -91,9 +91,6 @@
                 }
             }
 
-            // .nav-link {
-            //     width: 100% !important;
-            // }
         }
 
     }
@@ -104,7 +101,6 @@
 
     }
 
-    // .nav-link {}
 }
 
 @include mix.tablet {
@@ -216,41 +212,8 @@
 
     }
 
-    // .nav-link {
-    //     width: 100% !important;
-    //     margin-bottom: 0.2rem !important;
-
-    //     i {
-    //         font-size: 1.5rem !important;
-    //         margin-right: 1rem;
-
-    //     }
-    // }
-
     .section-name {
         font-size: 1.3rem !important;
 
     }
 }
-
-// .nav {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100% !important;
-
-//     &:hover {
-
-//         width: 100% !important;
-
-//         .nav-link {
-//             margin: 0.4rem 0 !important;
-//             width: 100% !important;
-
-//         }
-//     }
-
-// }
-
-// .logo-sidebar {
-//     width: 60%;
-// }
