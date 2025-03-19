@@ -3,8 +3,8 @@
 
 .sidebar {
     transition: 0.3s ease-in-out;
-    width: 15%;
-    left: -15% !important;
+    width: 11%;
+    left: -11% !important;
     z-index: 100;
 
     display: flex;
@@ -33,6 +33,13 @@
 .nav {
     align-items: center;
 
+    .nav-link {
+
+        i {
+            font-size: calc(0.8rem + 0.3vw) !important;
+        }
+    }
+
     &:hover {
         // align-items: flex-start;
         display: block;
@@ -43,7 +50,6 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             width: max-content !important; /// 
             margin: 0.3rem 0 !important;
-
 
             &:hover {
                 transform: scale(1.1);
@@ -61,9 +67,7 @@
                     display: block;
                 }
 
-
             }
-
 
         }
     }
@@ -71,11 +75,18 @@
 }
 
 
+
+
 // Estilos responsivos específicos
 @include mix.mobile {
 
     .nav {
-        // align-items: flex-start;
+        .nav-link {
+
+            i {
+                font-size: calc(1.275rem + 0.3vw) !important;
+            }
+        }
 
         &:hover {
             align-items: center;
@@ -130,7 +141,7 @@
     }
 
     .logo-sidebar {
-        width: 65%;
+        width: 85%;
     }
 
 }
@@ -175,6 +186,7 @@
 @include mix.desktop {
 
     .logo-container {
+        margin-left: 1rem;
         text-align: start;
     }
 

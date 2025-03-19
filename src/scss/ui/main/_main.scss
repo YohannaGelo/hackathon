@@ -1,9 +1,18 @@
 @use '../custom/custom' as cus;
+@use '../custom/mixins' as mix;
 
 /* Sobreescribo las medidas del container-sm de bootstrap */
 .container-sm {
-    max-width: 70%;
-    margin: 0 cus.$spacing 0 25%;
-    padding: cus.$spacing  0;
+    max-width: 85%;
+    margin: 0 cus.$spacing 0 13%;
+    padding: cus.$spacing 0;
     z-index: 5;
+
+    @include mix.mobile {
+        
+
+        max-width: 70%;
+        margin: 0 cus.$spacing 0 25%;
+        padding: cus.$spacing 0;
+    }
 }
