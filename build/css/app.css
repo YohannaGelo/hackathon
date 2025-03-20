@@ -13262,7 +13262,6 @@ header {
   opacity: 0;
   position: relative;
   bottom: 0;
-  filter: drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59) drop-shadow(-0.4px -1px 1px #ffde59);
 }
 
 @keyframes skylineEnter {
