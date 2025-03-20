@@ -58,6 +58,14 @@
     }
 }
 
+@mixin big-tablet {
+  @media screen and (min-width: cus.$lg) {
+      // Como no puede ir vacía ponemos aquí que hay un contenido
+      @content;
+
+  }
+}
+
 @mixin desktop {
     @media screen and (min-width: cus.$big) {
         // Como no puede ir vacía ponemos aquí que hay un contenido
@@ -76,7 +84,7 @@
 
 // Mixin para pantallas en orientación horizontal (más ancho que alto)
 @mixin tablet-horizontal {
-  @media screen and (orientation: landscape) and (min-width: cus.$hor) and (max-width: 1023px) {
+  @media screen and (orientation: landscape) and (min-width: cus.$hor) and (max-width: cus.$lg) {
       @content;
   }
 }

@@ -35,9 +35,7 @@
 
     .nav-link {
         padding: 0.3rem;
-        i {
-            // font-size: calc(1.25rem + 0.3vw) !important;
-        }
+
     }
 
     &:hover {
@@ -147,6 +145,12 @@
 
 }
 
+@include mix.big-tablet {
+
+    .nav {
+        align-items: flex-start;
+    }
+}
 // Ajustes para móviles y tablet en horizontal
 @include mix.tablet-horizontal {
 

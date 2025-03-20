@@ -13332,7 +13332,7 @@ header {
     width: 100%;
   }
 }
-@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 1023px) {
+@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 992px) {
   /* Logo */
   .logo {
     margin-top: 2rem;
@@ -13456,7 +13456,12 @@ header {
     width: 85%;
   }
 }
-@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 1023px) {
+@media screen and (min-width: 992px) {
+  .nav {
+    align-items: flex-start;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 992px) {
   .logo-container {
     text-align: center;
   }
