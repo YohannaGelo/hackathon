@@ -17,6 +17,10 @@ hr {
 
 }
 
+h3 {
+  margin: cus.$spacing 0;
+}
+
 .mini-hr {
   @include mix.custom-hr(2rem, 50%, contain, no-repeat);
   margin: 0 0 0.5rem 0;
