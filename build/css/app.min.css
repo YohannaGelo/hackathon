@@ -1457,6 +1457,10 @@ hr:hover {
   }
 }
 
+h3 {
+  margin: 2rem 0;
+}
+
 .mini-hr {
   border: none;
   height: 2rem;
