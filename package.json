@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compilar:sass": "sass --watch src/scss:build/css",
-    "purgar": "purgecss --css build/css/styles.css --content index.html --output build/css/styles.min.css",
-    "purgar2": "purgecss -css build/css/styles.css -con index.html -o build/css/styles.min.css"
+    "purgar": "purgecss --css build/css/app.css --content index.html --output build/css/app.min.css",
+    "purgar2": "purgecss -css build/css/app.css -con index.html -o build/css/app.min.css",
+    "optimizar": "cssnano build/css/app.min.css build/css/app.min.css",
+    "build:css": "npm run purgar && npm run optimizar"
   },
   "author": "Yohanna Gelo",
   "license": "ISC",
